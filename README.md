@@ -12,8 +12,30 @@ My intitial thoughts on this project is that an animal's outcome will be heavily
 
 
 # Prepare
-
-
+- Normalized columns by making them pythonic
+- Merged intake and outcome dataframes
+    - 190,609 rows after merge
+- Dropped nulls
+    - 190,511 rows after drop
+- Subset dataframe for only dogs
+    - 119,868 rows for dogs
+- Dropped columns:
+    - found location
+    - outcome_subtype
+    - breed_x
+    - animal_type_y
+    - color_x
+    - monthyear_x
+    - monthyear_y
+    
+- Drop values that are Rto-Adopt, Disposal, Missing, Stolen, Transfer
+- Created features using existing data
+    - time in shelter
+    - dropped any rows that had negative days. 48873 rows dropped.
+    - age_outcome: age they were upon their outcome
+- Simplified Top 10 breeds to represent majority breed
+    - over 2000 breeds
+ 
 
 
 # Explore
