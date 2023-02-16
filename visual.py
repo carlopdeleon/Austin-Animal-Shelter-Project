@@ -497,4 +497,39 @@ def test_model(X_train, y_train, X_val, y_val, X_test, y_test):
 
     return df
 
+#--------------------------------------------------------------------------------------------------
+
+
+def chi_test(train, x, y ):
     
+    # for crosstab
+    br = train[x]
+    ad = train[y]
+
+    #crosstab
+    ct = pd.crosstab(br,ad)
+
+    # chi square test
+    chi2, p, degf, expected = stats.chi2_contingency(ct)
+
+    print ('Chi-Square Results')
+    print('--------------------')
+    print(f'P-value: {p}')
+
+#--------------------------------------------------------------------------------------------------
+
+def ttest1samp1(df):
+
+    '''
+    1-Sample T-test
+    '''
+    # Compare variable
+    x = df[df['outcome_type'] == 'Adoption']['age_months_outcome']
+    y = df.age_months_outcome.mean()
+
+    t,p = stats.ttest_1samp(x, y )
+
+    print ('T-test Results')
+    print('---------------')
+    print(f'Test statistic: {round(t,2)}')
+    print(f'P-value: {p}')
