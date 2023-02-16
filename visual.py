@@ -15,6 +15,10 @@ from sklearn.linear_model import LogisticRegression
 
 def overall_outcome(df):
 
+    '''
+    Plots the overall outcome of all dogs regardless of breed, color, age, etc.
+    '''
+
     # Outcomes
     ax = sns.countplot(x='outcome_type', data=df, ec='black')
     ax.bar_label(ax.containers[0])
@@ -27,6 +31,10 @@ def overall_outcome(df):
 #--------------------------------------------------------------------------------------------------
 
 def breed_plot(df):
+
+    '''
+    Plots the outcomes of the Top 5 Breeds.
+    '''
 
     # Top five breeds
     top_five = ['Pit Bull','Labrador Retriever','Chihuahua','German Shepherd','Australian Cattle Dog']
@@ -45,6 +53,10 @@ def breed_plot(df):
 #--------------------------------------------------------------------------------------------------
 
 def color_plot(df):
+
+    '''
+    Plots the outcomes of the Top 5 dog colors.
+    '''
 
     # Top five colors
     five_colors = ['Black/White','Brown/White','Blue/White','Black','Tan/White']
@@ -65,6 +77,9 @@ def color_plot(df):
 
 def age_plot(df):
 
+    '''
+    Plots the outcomes of dogs depending on their age. Up to a year old and over a year old.
+    '''
 
     # countplot
     ax = sns.countplot(x='outcome_type', hue='age_years_outcome', data=df, ec='black')
@@ -80,6 +95,9 @@ def age_plot(df):
 
 def time_plot(df):
 
+    '''
+    Plots the outcomes of dogs depending on their time in shelter. Less than 30 days or more than 30 days.
+    '''
 
     # countplot
     ax = sns.countplot(x='outcome_type', hue='months_in_shelter', data=df, ec='black')
@@ -126,6 +144,10 @@ def spearmanr(df, x, y):
 
 def dec_tree_df(X_train, y_train, X_val, y_val):
 
+    '''
+    Decision Tree and returns dataframe of accuracy scores.
+    '''
+
     metrics = []
 
     for i in range(2,31):
@@ -154,6 +176,10 @@ def dec_tree_df(X_train, y_train, X_val, y_val):
 #--------------------------------------------------------------------------------------------------
 
 def dec_tree(X_train, y_train, X_val, y_val):
+
+    '''
+    Decision Tree and returns dataframe of accuracy scores.
+    '''
 
     metrics = []
 
@@ -190,7 +216,9 @@ def dec_tree(X_train, y_train, X_val, y_val):
 
 def rand_forest(X_train, y_train, X_val, y_val):
 
-
+    '''
+    Random Forest and returns dataframe of accuracy scores.
+    '''
 
     metrics_rf = []
 
@@ -228,6 +256,10 @@ def rand_forest(X_train, y_train, X_val, y_val):
 
 def log_reg(X_train, y_train, X_val, y_val):
 
+    '''
+    Logistic Regression and returns dataframe of accuracy scores.
+    '''
+
     metrics = []
 
     lr = LogisticRegression(random_state=123)
@@ -256,6 +288,10 @@ def log_reg(X_train, y_train, X_val, y_val):
 #--------------------------------------------------------------------------------------------------
 
 def knn(X_train, y_train, X_val, y_val):
+
+    '''
+    KNN model and returns data frame of accuracy scores.
+    '''
 
     metrics = []
 
@@ -288,6 +324,10 @@ def knn(X_train, y_train, X_val, y_val):
 
 def dec_tree1(X_train, y_train, X_val, y_val):
 
+    '''
+    Decision Tree model and returns data frame of accuracy scores. Does not print results.
+    '''
+
     metrics = []
 
     # Model Object
@@ -317,7 +357,9 @@ def dec_tree1(X_train, y_train, X_val, y_val):
 
 def rand_forest1(X_train, y_train, X_val, y_val):
 
-
+    '''
+    Random Forest model and returns data frame of accuracy scores. Does not print results.
+    '''
 
     metrics_rf = []
 
@@ -349,6 +391,10 @@ def rand_forest1(X_train, y_train, X_val, y_val):
 
 def log_reg1(X_train, y_train, X_val, y_val):
 
+    '''
+    Logistic Regression model and returns data frame of accuracy scores. Does not print results.
+    '''
+
     metrics = []
 
     lr = LogisticRegression(random_state=123)
@@ -372,6 +418,10 @@ def log_reg1(X_train, y_train, X_val, y_val):
 #--------------------------------------------------------------------------------------------------
 
 def knn1(X_train, y_train, X_val, y_val):
+
+    '''
+    KNN model and returns data frame of accuracy scores. Does not print results.
+    '''
 
     metrics = []
 
@@ -398,7 +448,9 @@ def knn1(X_train, y_train, X_val, y_val):
 
 def all_in_one(X_train, y_train, X_val, y_val):
 
-
+    '''
+    Using other functions to creates models and create a datafram of all their accuarcy scores.
+    '''
 
     dt = dec_tree1(X_train, y_train, X_val, y_val)
     rf = rand_forest1(X_train, y_train, X_val, y_val)
@@ -417,6 +469,10 @@ def all_in_one(X_train, y_train, X_val, y_val):
 #--------------------------------------------------------------------------------------------------
 
 def test_model(X_train, y_train, X_val, y_val, X_test, y_test):
+
+    '''
+    Random Forest using test data set. Returns dataframe of validate and test scores.
+    '''
 
     metrics = []
 
