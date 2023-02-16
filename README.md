@@ -6,6 +6,29 @@ This project is to delve into Austin's Animal Shelter statistics to see how an a
 # Initial Thoughts
 My intitial thoughts on this project is that an animal's outcome will be heavily influenced by their age and breed. Their color will have a small influence on their chances at being adopted. I also wanted to explore if their time in shelter somehow made them less desireable to potential adoptive parents. 
 
+
+# Data Dictionary
+
+| Feature | Definition |
+| :-- | :-- |
+| animal_id | uniqe identifier for animal |
+| date_intake | date of intake |
+| intake_type | method in which animal was obtained |
+| intake_condition | condition/reason for animal intake | 
+| animal_type | type of animal |
+| age_upon_intake | age of animal when obtained |
+| date_outcome | date of outcome |
+| date_of_birth | birth date |
+| outcome_type | outcome of animal:<br> - adoption<br> - return to owner<br> - euthanasia<br> - died |
+| sex_upon_outcome | sex of animal: <br> - intact<br> - neutered<br> - spayed|
+| age_upon_outcome |age when outcome reached |
+| breed | breed of animal |
+| color | color(s) of animal |
+| time_in_shelter | time spent in shelter in days |
+| months_in_shelter | time spent in shelter in months |
+| age_months_outcome | age of animal in months when outcome reached |
+| age_years_outcome | age of animal in years when outcome reached |
+
 # Acquire
 
 
@@ -35,7 +58,7 @@ My intitial thoughts on this project is that an animal's outcome will be heavily
     - age_outcome: age they were upon their outcome
 - Simplified Top 10 breeds to represent majority breed
     - over 2000 breeds
- 
+- coverted date columns to datetime data types 
 
 
 # Explore
@@ -44,3 +67,10 @@ My intitial thoughts on this project is that an animal's outcome will be heavily
 2. Does their color influence their chances of being placed in a home?
 3. Does their time in a shelter decrease their desirability to potential adoptive parents?
 4. Does their age influence their chances of being adopted?
+
+
+# Steps to Reproduce
+
+1. Download data:
+    - Link for Intakes: https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/data
+    - Link for Outcomes: https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data
