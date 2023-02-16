@@ -59,12 +59,13 @@ My intitial thoughts on this project is that an dog's outcome will be heavily in
 - Coverted date columns to datetime data types.
 - Subset dataframe for only dogs
     - top 10 dog breeds (over 2000 breeds listed)
-    - top 10 colors 
+    - top 10 colors
 - Subset outcome types for: 
     - adoption
     - return to owner
     - euthanasia
     - died
+- After all subsets: 20,137 rows left
 - Dropped columns:
     - found location
     - outcome subtype
