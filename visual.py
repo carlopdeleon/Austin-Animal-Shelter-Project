@@ -88,7 +88,7 @@ def time_plot(df):
     plt.xticks(rotation=35)
     plt.ylabel('Count')
     plt.xlabel('Outcome')
-    plt.title('Outcomes based on Age')
+    plt.title('Outcomes based on Time in Shelter')
     plt.show()
 
 #--------------------------------------------------------------------------------------------------
@@ -103,8 +103,8 @@ def ttest1samp(df):
 
     t,p = stats.ttest_1samp(x, df.time_in_shelter.mean())
 
-    print ('Results')
-    print('--------')
+    print ('T-test Results')
+    print('---------------')
     print(f'Test statistic: {round(t,2)}')
     print(f'P-value: {p}')
 
@@ -117,8 +117,8 @@ def spearmanr(df, x, y):
     '''
     corr , p = stats.spearmanr(df[x], df[y])
 
-    print ('Results')
-    print('--------')
+    print ('Spearmans R Results')
+    print('--------------------')
     print(f'Correlation: {round(corr,4)}')
     print(f'P-value: {p}')
 
