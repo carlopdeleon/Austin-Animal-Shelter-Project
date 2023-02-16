@@ -30,6 +30,10 @@ def split_data(df, target= 'enter target column here'):
 
 def prep_aac(intake_df, outcome_df):
 
+    '''
+    Preps Austin Animal stats csv. Normalized columns. Drops outcome subtype. Returns dataframes.
+    '''
+
     # Normalize columns
     outcome_df.columns = outcome_df.columns.str.replace(' ','_')
     intake_df.columns = intake_df.columns.str.replace(' ','_')
@@ -49,6 +53,10 @@ def prep_aac(intake_df, outcome_df):
 
 def combined_df(intake_df, outcome_df):
 
+    '''
+    Merges intake and outcome dataframes. Renames comlumns and drops duplicated columns.
+    '''
+
     # Merged Data frames
     combined = intake_df.merge(outcome_df, on='animal_id')
 
@@ -64,6 +72,11 @@ def combined_df(intake_df, outcome_df):
 #------------------------------------------------------------------------------------------------------------
 
 def prep_combined(combined):
+
+    '''
+    Preps the merged dataframe. Coverts columns to datetime dtype and removes negative days from columns. Subsets for certain outcome types.
+    Top 10 breeds and Top 10 colors.
+    '''
 
     # drop nulls, only 107 out of 190k
     combined = combined.dropna()
@@ -123,7 +136,9 @@ def prep_combined(combined):
 
 def feature_eng(combined_dog):
 
-
+    '''
+    Feature engineered columns. Months in shelter and Age in months and age in years.
+    '''
     
     # Duplicating time in shelter row to manipulate with np.where to make new column
     combined_dog['months_in_shelter'] = combined_dog.time_in_shelter
@@ -142,6 +157,10 @@ def feature_eng(combined_dog):
 
 
 def trains(train, val, test):
+
+    '''
+    Creates X and y trains.
+    '''
 
     drop_these = ['animal_id', 'date_intake','intake_type', 'intake_condition',
               'animal_type','age_upon_intake','age_upon_outcome','months_in_shelter',
@@ -172,6 +191,9 @@ def trains(train, val, test):
 
 def get_scaled(X_train, X_val, X_test):
 
+    '''
+    Scales data.
+    '''
 
     # Scaler Object
     mm = MinMaxScaler()
@@ -187,3 +209,7 @@ def get_scaled(X_train, X_val, X_test):
     mm.transform(X_test[['time_in_shelter','age_months_outcome']])
 
     return X_train, X_val, X_test
+
+#------------------------------------------------------------------------------------------------------------
+
+

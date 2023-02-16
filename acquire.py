@@ -14,7 +14,9 @@ from env import host, username, password    # import needed for get_connection()
 
 def get_aac_intakes():
 
-
+    '''
+    Get data.
+    '''
 
     filename = "aac_intakes.csv"
 
@@ -26,6 +28,10 @@ def get_aac_intakes():
 
 
 def get_aac_outcomes():
+
+    '''
+    Get data.
+    '''
 
     filename = 'aac_outcomes.csv'
 
