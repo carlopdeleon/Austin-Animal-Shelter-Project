@@ -1,4 +1,4 @@
-!<img
+<img
   src="images/after_dogs.jpeg"
   alt="Alt text"
   title="Optional title"
