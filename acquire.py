@@ -8,7 +8,6 @@ import requests
 from pydataset import data
 from scipy import stats
 
-from env import host, username, password    # import needed for get_connection() to operate
 
 #------------------------------------------------------------------------------------------------------------
 
