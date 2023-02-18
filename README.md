@@ -1,3 +1,5 @@
+![My Image](after_dogs.jpeg)
+
 # Second Chances at Austin Animal Shelters 
 
 # Project Description
