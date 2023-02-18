@@ -1,4 +1,8 @@
-![My Image](after_dogs.jpeg)
+!<img
+  src="images/after_dogs.jpeg"
+  alt="Alt text"
+  title="Optional title"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 # Second Chances at Austin Animal Shelters 
 
