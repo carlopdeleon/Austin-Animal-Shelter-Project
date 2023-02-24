@@ -7,15 +7,15 @@
 
 # Second Chances at Austin Animal Shelters 
 
-# Project Description
+## Project Description
 This project dives into Austin's Animal Shelters statistics to find how particular features, such as breed, influence a dog's outcome. The main goal is to discover trends hidden within the data and use them as drivers in machine learning models to predict their outcome. An optimized machine learning model utilizing the uncovered drivers could be used to develop a deeper understanding of how certain outcome types are reached and create a program to increase their chances for a positive outcome.
 
 
-# Initial Thoughts
+## Initial Thoughts
 My intitial thoughts on this project is that an dog's outcome will be heavily influenced by their age and breed. Their color will have a small influence on their chances at being adopted. I also wanted to explore if their time in shelter somehow made them less desireable to potential adoptive parents. 
 
 
-# The Plan
+## The Plan
 1. Acquire data
 2. Initial exploration with info and describe tables.
 3. Clean data.
@@ -26,7 +26,7 @@ My intitial thoughts on this project is that an dog's outcome will be heavily in
 
 
 
-# Data Dictionary
+## Data Dictionary
 
 | Feature | Definition |
 | :-- | :-- |
@@ -48,7 +48,7 @@ My intitial thoughts on this project is that an dog's outcome will be heavily in
 | age_months_outcome | age of animal in months when outcome reached |
 | age_years_outcome | age of animal in years when outcome reached |
 
-# Acquire
+## Acquire
 
 - Data acquired from data.austintexas.gov. Download link found below in 'Steps to Reroduce'.  
     - Intakes data set: 148,133 rows
@@ -57,7 +57,7 @@ My intitial thoughts on this project is that an dog's outcome will be heavily in
 - Each column represents the dogs features and background information
 
 
-# Prepare
+## Prepare
 - Renamed columns to be user friendly.
 - Merged intake and outcome dataframes
     - 190,609 rows after merge
@@ -87,17 +87,17 @@ My intitial thoughts on this project is that an dog's outcome will be heavily in
     - validate 
     - test 
 
-# Explore
+## Explore
 **Questions**
 1. Does the breed influence their chances of being placed in a home?
 2. Does their color influence their chances of being placed in a home?
 3. Does their time in a shelter decrease their desirability to potential adoptive parents?
 4. Does their age influence their chances of being adopted?
 
-# Conclusion
+## Conclusion
 All four features being tested for significance proved to influence the target variable, outcome type. There were a couple of values in particular that stood out in the visuals. Pit Bulls are being adopted or returned to their owners at a higher rate. Black and white dogs are being adopted at a drastically higher rate than dogs of different colors. Turnover rate for time in shelter to adoption is higher for adoption than other outcome types. As for age, it has a slight influence when it comes to adoption, but has a increased influence when it comes to being returned to their owner. 
 
-# Next Steps
+## Next Steps
 - Given more time, I would delve deeper into the data and explore how different features influence outcome type. Features to look into:
     - intake type (stray, owner surrender, abandoned, etc.)
     - intake condition (normal, sick, pregnant, nursing, etc.)
@@ -105,7 +105,7 @@ All four features being tested for significance proved to influence the target v
 - I would also recommend exploring the adoption rates of individual breeds based on their color. 
 
 
-# Steps to Reproduce
+## Steps to Reproduce
 
 1. Clone this repo.
 2. Download data:
