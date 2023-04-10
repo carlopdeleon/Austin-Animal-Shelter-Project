@@ -1,11 +1,20 @@
+
+  
+
+# Second Chances at Austin Animal Shelters 
+<a href="#"><img alt="Python" src="https://img.shields.io/badge/Python-013243.svg?logo=python&logoColor=blue"></a>
+<a href="#"><img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458.svg?logo=pandas&logoColor=white"></a>
+<a href="#"><img alt="NumPy" src="https://img.shields.io/badge/Numpy-2a4d69.svg?logo=numpy&logoColor=grey"></a>
+<a href="#"><img alt="Matplotlib" src="https://img.shields.io/badge/Matplotlib-8DF9C1.svg?logo=matplotlib&logoColor=blue"></a>
+<a href="#"><img alt="seaborn" src="https://img.shields.io/badge/seaborn-65A9A8.svg?logo=pandas&logoColor=white"></a>
+<a href="#"><img alt="sklearn" src="https://img.shields.io/badge/sklearn-4b86b4.svg?logo=scikitlearn&logoColor=grey"></a>
+<a href="#"><img alt="SciPy" src="https://img.shields.io/badge/SciPy-1560bd.svg?logo=scipy&logoColor=blue"></a>
+
 <img
   src="images/after_dogs.jpeg"
   alt="Alt text"
   title="Optional title"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
-  
-
-# Second Chances at Austin Animal Shelters 
 
 ## Project Description
 This project dives into Austin's Animal Shelters statistics to find how particular features, such as breed, influence a dog's outcome. The main goal is to discover trends hidden within the data and use them as drivers in machine learning models to predict their outcome. An optimized machine learning model utilizing the uncovered drivers could be used to develop a deeper understanding of how certain outcome types are reached and create a program to increase their chances for a positive outcome.
